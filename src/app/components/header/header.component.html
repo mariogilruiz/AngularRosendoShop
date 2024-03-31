@@ -1,0 +1,39 @@
+<header class="container-fluid">
+    <section class="row no-gutters">
+
+        <div class="b-header__heading">
+            <img src="assets/images/bolsa-de-la-compra.png" alt="Comprar">
+            <h1 class="h1">Rosendo!</h1>
+        </div>
+
+        <nav class="b-header__nav">
+
+            <ul class="no-gutters">
+
+                <li class="b-bttn--home" 
+                [routerLink]="['/']" routerLinkActive="activo" 
+                [routerLinkActiveOptions]="{exact:true}">
+                    <img src="assets/images/home-automation.png" alt="" >
+                    <p>Home</p>
+                </li>
+                
+                <li class="b-bttn--productos"
+                 [routerLink]="['/productos']" 
+                 routerLinkActive="activo">
+                    <img src="assets/images/agregar-producto.png" alt="">
+                    <p>Productos</p>
+                </li>
+
+                <li class="b-bttn--gestion"
+                 [routerLink]="['/gestion']" 
+                 routerLinkActive="activo">
+                    <img src="assets/images/gestion-del-cambio.png" alt="">
+                    <p>Gestion</p>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </section>
+</header>

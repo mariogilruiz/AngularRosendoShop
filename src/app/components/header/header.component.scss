@@ -1,0 +1,84 @@
+.b-header__heading{
+    height: 100px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  
+    img{
+        height:70px;
+    }
+
+    h1{
+        margin:20px 10px;
+    }
+}
+
+.b-header__nav{
+    height: 72px;
+    background-color: #FFC970;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+       
+        li{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            list-style: none;
+            height: 80%;
+            width: 100px;
+            margin: 0px 10px;
+            border-radius: 10px;
+            transition: 300ms ease;
+            cursor: pointer;
+
+            img{
+                height: 30px;
+                margin-top: 5px ;
+                margin-bottom: -5px;
+                transition: 300ms ease;
+                position: absolute;
+                margin-top: 20px;
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
+
+            &:hover img{
+                transform: scale(1.8);
+                margin-top: 13.5px;
+                
+            }
+
+            &:hover p {
+                display: none;
+            }
+            
+        }
+    }
+}
+
+.b-bttn--home{
+    background-color:#5c9cd4 ;
+}
+
+.b-bttn--productos{
+    background-color: #9bcb5c;
+}
+
+.b-bttn--gestion{
+    background-color: #c46380;
+}
+
+.activo{
+    border: 1px solid #434343;
+    box-shadow: 1px 1px 1px grey;
+}

@@ -1,0 +1,60 @@
+<section class="container">
+    <div class="b-galeriaProdcuctos row">
+
+        <div class="b-galeriaProdcuctos__header d-flex justify-content-between">
+            <h3 class="h3 mb-5">Productos: {{totalProductos}}</h3>
+            <div>
+                <button class="b-bttn--selectGlaeria" (click)="mostrar('galeria')"  value="galeria">
+                    <img src="assets/images/lineas-de-cuadricula (1).png" alt="">
+                </button>
+                <button class="b-bttn--selectGlaeria" (click)="mostrar('lista')"  value="lista">
+                    <img src="assets/images/lista.png" alt="">
+                </button>
+            </div>
+        </div>
+
+        <div *ngIf="tipoGaleria==='galeria'" class="row justify-content-center">
+
+            <figure class="b-cardProductos p-0" *ngFor="let producto of arrProductos">
+
+                <div class="b-cardProductos__contentImg">
+                    <img [src]="producto.image" alt="{{producto.name}}">
+                </div >
+
+                <div class="b-cardProductos__contentInfo">
+                    <figcaption>
+                        <h2 class="b-heading-h2--cardProductos h4 pt-2 pb-2">{{producto.name}}</h2>
+                    </figcaption>
+                    <p>
+                        <span class="b-font-primary--bold pe-2">Precio:</span>{{producto.price}}€
+                    </p>
+                    <p class="d-flex justify-content-start align-items-center">
+                        <span class="b-font-primary--bold pe-2">Valoracion:</span> {{producto.stars}} <img class="ps-1" src="assets/images/estrella (2).png" alt="">
+                    </p>
+                    <p><span class="b-font-primary--bold pe-2 pb-1 d-block">Info</span>{{producto.description}}</p>
+                </div>
+
+            </figure>
+
+        </div>
+
+        <div *ngIf="tipoGaleria==='lista'" class="row justify-content-start">
+       
+            <article class="b-cardProductosLista m-3 pt-2 pb-2" *ngFor="let producto of arrProductos">
+
+                <h2 class="h4">{{producto.name}}</h2>
+                <p><span class="b-font-primary--bold pe-2">Precio:</span> {{producto.price}}€</p>
+                <p class="d-flex justify-content-start align-items-center">
+                    <span class="b-font-primary--bold pe-2">Valoracion:</span> {{producto.stars}} <img class="ps-1"
+                        src="assets/images/estrella (2).png" alt="">
+                </p>
+                <p><span class="b-font-primary--bold pe-2 pb-1">Info:</span>{{producto.description}}</p>
+
+
+            </article>
+        
+        </div>
+    </div>
+</section>
+
+

@@ -1,0 +1,14 @@
+.b-cardProductosLista{
+    width: 60%;
+    border-radius: 10px;
+    border: 1px solid grey;
+
+    &:hover{
+
+        box-shadow: 0px 0px 3px black;
+    }
+    p{
+        padding-bottom: 5px;
+        padding-left: 20px;
+    }
+}
